@@ -1,0 +1,296 @@
+:root {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background: #f4f5f7;
+    color: #111;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #f4f5f7;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    margin: 0 0 12px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+h2 {
+    margin: 16px 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+}
+
+h3 {
+    margin: 12px 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+}
+
+p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d0d3d8;
+    border-radius: 12px;
+    font: inherit;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+input:disabled,
+textarea:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+button:active:not(:disabled) {
+    background-color: #1e40af;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-success {
+    background-color: #16a34a;
+}
+
+.btn-success:hover:not(:disabled) {
+    background-color: #15803d;
+}
+
+.btn-danger {
+    background-color: #dc2626;
+}
+
+.btn-danger:hover:not(:disabled) {
+    background-color: #b91c1c;
+}
+
+.btn-warning {
+    background-color: #ca8a04;
+    color: white;
+}
+
+.btn-warning:hover:not(:disabled) {
+    background-color: #b45309;
+}
+
+.error {
+    color: #b91c1c;
+    margin: 8px 0;
+    padding: 12px;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.success {
+    color: #15803d;
+    margin: 8px 0;
+    padding: 12px;
+    background-color: #dcfce7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.warning {
+    color: #92400e;
+    margin: 8px 0;
+    padding: 12px;
+    background-color: #fef3c7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+audio {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+.pagination button {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+.pagination span {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.recording-indicator {
+    padding: 12px;
+    background-color: #fef3c7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    color: #92400e;
+    font-weight: 500;
+}
+
+.recording-indicator p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .page {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    button,
+    input,
+    textarea {
+        font-size: 16px;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .pagination button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .pagination span {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input,
+    textarea,
+    button {
+        padding: 12px;
+    }
+}
